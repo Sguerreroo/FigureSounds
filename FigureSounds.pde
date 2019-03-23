@@ -4,7 +4,7 @@ SinOsc[] oscillators;
 Env env;
 
 int[] midiSequence = { 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72 }; 
-int count = 0, numberOfWaves = 1, frame = 1;
+int count = 0, frame = 1;
 boolean envol = true, modeAuto = false, home = true;
 
 float attackTime = 0.001;
@@ -117,8 +117,8 @@ void drawTriangle(color color_) {
   triangle(random(0, 600), random(0, 450), random(0, 600), random(0, 450), random(0, 600), random(0, 450));
 }
 
-float midiToFreq(int nota) {
-  return (pow(2, ((nota-69)/12.0))) * 440;
+float midiToFreq(int note) {
+  return (pow(2, ((note-69)/12.0))) * 440;
 }
 
 void mainScreen() {
